@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import BoardComponent from "./components/BoardComponent";
 
-import Timer from "./components/Timer";
+// import Timer from "./components/Timer";
 
 import { Board } from "./models/Board";
 import { Colors } from "./models/Colors";
