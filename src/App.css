@@ -9,13 +9,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Courier New", Courier, monospace;
 }
 
+.BoardRadius {
+  max-width: 563.2px;
+  max-height: 563.2px;
+  background-color: rgb(36, 30, 30);
+  display: block;
+  z-index: 1;
+}
+
+.Boarder {
+  padding: 25.6px 25.6px;
+  box-shadow: 1px 1px 5px 5px rgb(163, 64, 6);
+}
 .board {
   width: calc(64px * 8);
   height: calc(64px * 8);
   display: flex;
   flex-wrap: wrap;
+  z-index: 2;
 }
 
 .cell {
@@ -26,10 +40,194 @@
   align-items: center;
 }
 
+.cell img {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
 .black {
-  background-color: deepskyblue;
+  background-color: rgb(12, 85, 12);
 }
 
 .white {
-  background-color: orange;
+  background-color: rgba(218, 135, 79, 0.753);
+}
+
+.selected {
+  background-color: rgb(236, 106, 0);
+}
+.available {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: rgb(255, 0, 0);
+}
+
+h1 {
+  color: rgb(241, 131, 4);
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.lost {
+  height: calc(50vh - 60px);
+  background-color: rgb(43, 38, 38);
+  display: inline-block;
+  width: 256px;
+  margin-top: 40px;
+  color: rgb(241, 228, 215);
+}
+
+.lost1 {
+  height: calc(50vh - 60px);
+  background-color: rgb(241, 228, 215);
+  color: rgb(43, 38, 38);
+  display: inline-block;
+  width: 256px;
+}
+
+.Restart {
+  color: #000;
+  background-color: rgb(241, 228, 215);
+  color: rgb(43, 38, 38);
+  font-family: "Courier New", Courier, monospace;
+  width: 512px;
+  height: 75px;
+  font-size: 20px;
+}
+.divRestart {
+  padding-bottom: 720px;
+  position: absolute;
+}
+h2 {
+  font-size: 20xp;
+}
+
+@media all and (max-width: 712px) {
+  .board {
+    max-width: calc(49px * 8);
+    max-height: calc(49px * 8);
+  }
+  .cell {
+    width: 49px;
+    height: 49px;
+  }
+  .lost {
+    width: 196px;
+  }
+
+  .lost1 {
+    width: 196px;
+  }
+  .divRestart {
+    padding-bottom: 650px;
+    position: absolute;
+  }
+  .Restart {
+    width: 392px;
+    height: 75px;
+    font-size: 20px;
+  }
+  .cell img {
+    width: 44px;
+    height: 44px;
+    position: relative;
+  }
+}
+
+@media all and (max-width: 471px) {
+  .board {
+    max-width: calc(47px * 8);
+    max-height: calc(47px * 8);
+  }
+  .cell {
+    width: 47px;
+    height: 47px;
+  }
+  .cell img {
+    width: 35px;
+    height: 35px;
+    position: relative;
+  }
+  .lost {
+    width: 188px;
+  }
+
+  .lost1 {
+    width: 188px;
+  }
+  .BoardRadius {
+    max-width: 454px;
+    max-height: 454px;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .board {
+    max-width: calc(40px * 8);
+    max-height: calc(40px * 8);
+  }
+  .cell {
+    width: 40px;
+    height: 40px;
+  }
+  .cell img {
+    width: 32px;
+    height: 32px;
+    position: relative;
+  }
+  .lost {
+    width: 160px;
+  }
+
+  .lost1 {
+    width: 160px;
+  }
+  .BoardRadius {
+    max-width: 371.2px;
+    max-height: 371.2px;
+  }
+  .Restart {
+    width: 320px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .divRestart {
+    padding-bottom: 550px;
+    position: absolute;
+  }
+}
+
+@media all and (max-width: 366px) {
+  .board {
+    max-width: calc(34px * 8);
+    max-height: calc(34px * 8);
+  }
+  .cell {
+    width: 34px;
+    height: 34px;
+  }
+  .cell img {
+    width: 28px;
+    height: 28px;
+    position: relative;
+  }
+  .lost {
+    width: 136px;
+  }
+
+  .lost1 {
+    width: 136px;
+  }
+  .BoardRadius {
+    max-width: 323.2px;
+    max-height: 323.2px;
+  }
+  .Restart {
+    width: 272px;
+    height: 75px;
+    font-size: 20px;
+  }
 }
