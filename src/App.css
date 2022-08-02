@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   font-family: "Courier New", Courier, monospace;
+  position: relative;
 }
 
 .BoardRadius {
@@ -17,7 +18,9 @@
   max-height: 563.2px;
   background-color: rgb(36, 30, 30);
   display: block;
-  z-index: 1;
+  z-index: 2;
+
+  right: 140px;
 }
 
 .Boarder {
@@ -29,7 +32,7 @@
   height: calc(64px * 8);
   display: flex;
   flex-wrap: wrap;
-  z-index: 2;
+  z-index: 3;
 }
 
 .cell {
@@ -93,13 +96,12 @@ h1 {
   background-color: rgb(241, 228, 215);
   color: rgb(43, 38, 38);
   font-family: "Courier New", Courier, monospace;
-  width: 512px;
-  height: 75px;
+  max-width: 100px;
+  max-height: 75px;
   font-size: 20px;
 }
 .divRestart {
-  padding-bottom: 720px;
-  position: absolute;
+  z-index: 1;
 }
 h2 {
   font-size: 20xp;
@@ -121,15 +123,7 @@ h2 {
   .lost1 {
     width: 196px;
   }
-  .divRestart {
-    padding-bottom: 650px;
-    position: absolute;
-  }
-  .Restart {
-    width: 392px;
-    height: 75px;
-    font-size: 20px;
-  }
+
   .cell img {
     width: 44px;
     height: 44px;
@@ -137,7 +131,7 @@ h2 {
   }
 }
 
-@media all and (max-width: 471px) {
+@media all and (max-width: 512px) {
   .board {
     max-width: calc(47px * 8);
     max-height: calc(47px * 8);
@@ -161,6 +155,12 @@ h2 {
   .BoardRadius {
     max-width: 454px;
     max-height: 454px;
+  }
+  .Restart {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 12px;
   }
 }
 
@@ -188,15 +188,6 @@ h2 {
   .BoardRadius {
     max-width: 371.2px;
     max-height: 371.2px;
-  }
-  .Restart {
-    width: 320px;
-    height: 40px;
-    font-size: 20px;
-  }
-  .divRestart {
-    padding-bottom: 550px;
-    position: absolute;
   }
 }
 
